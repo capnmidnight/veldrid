@@ -83,9 +83,7 @@ namespace Veldrid.VirtualReality.OpenVR
                 _deviceName = sb.ToString();
             }
 
-            uint eyeWidth = 0;
-            uint eyeHeight = 0;
-            _vrSystem.GetRecommendedRenderTargetSize(ref eyeWidth, ref eyeHeight);
+            _vrSystem.GetRecommendedRenderTargetSize(out var eyeWidth, out var eyeHeight);
 
             _leftEyeFB = CreateFramebuffer(eyeWidth, eyeHeight);
             _rightEyeFB = CreateFramebuffer(eyeWidth, eyeHeight);
