@@ -44,7 +44,7 @@ namespace Veldrid.VirtualReality.Sample
             };
             VRContext vrContext = _useOculus ? VRContext.CreateOculus(options) : VRContext.CreateOpenVR(options);
 
-            GraphicsBackend backend = GraphicsBackend.Direct3D11;
+            GraphicsBackend backend = GraphicsBackend.Vulkan;
 
             bool debug = false;
 #if DEBUG
